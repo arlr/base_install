@@ -27,7 +27,10 @@ then
 	exit
 fi
 
+mkdir /home/`logname`/Software
 
+
+# From Repo
 BLUE "Updating repositories..."
 sudo apt update
 
@@ -50,3 +53,26 @@ sudo apt install -y binwalk
 
 BLUE "Installing cmake..."
 sudo apt install -y cmake
+
+BLUE "Installing python..."
+sudo apt install -y python
+
+BLUE "Installing python3..."
+sudo apt install -y python3
+
+BLUE "Installing Pip3..."
+sudo apt install -y python3-pip
+
+
+# From git
+
+
+# From web
+BLUE "Download hash-identifier..."
+wget https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/hash-identifier/source-archive.zip -O /home/`logname`/Software/hash-identifier-archive.zip
+7z x /home/`logname`/Software/hash-identifier-archive.zip -o/home/`logname`/Software/
+
+
+# End
+chmod -R o+wxr /home/`logname`/Software/
+
