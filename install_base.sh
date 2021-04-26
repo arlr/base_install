@@ -63,6 +63,10 @@ sudo apt install -y python3
 BLUE "Installing Pip3..."
 sudo apt install -y python3-pip
 
+# From Pip
+BLUE "Installing bin2png..."
+pip3 install bin2png
+
 
 # From git
 BLUE "Download bin2img..."
@@ -81,11 +85,5 @@ wget http://aluigi.org/mytoolz/signsrch.zip -O /home/`logname`/Software/signsrch
 GREEN "Install signsrch..."
 make -C /home/`logname`/Software/signsrch/src
 cp /home/`logname`/Software/signsrch/src/signsrch /home/`logname`/Software/signsrch/
-
-# End
-chmod -R o+wxr /home/`logname`/Software/
-
-
-
 
 GREEN "Install over"
